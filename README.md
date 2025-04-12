@@ -22,7 +22,7 @@
  
  ## **My BitDogLab**  
  
- ![Image](https://github.com/user-attachments/assets/22049b52-f9ec-4e72-bb2c-1a0df1b4a48c)  
+ ![Image](https://github.com/user-attachments/assets/714fca2b-53e3-47e3-8410-cef01dea8342)  
  
  _Photo of the BitDogLab board._  
  

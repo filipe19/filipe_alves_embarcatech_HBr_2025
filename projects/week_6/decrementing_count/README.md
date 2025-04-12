@@ -65,12 +65,11 @@ Create a program in C that:
 
 ## **My BitDogLab**  
 
-![Image](https://github.com/user-attachments/assets/...)  
+![Image](https://github.com/user-attachments/assets/3659681c-c750-4271-abe4-fc12b04a36d2)  
 
 _Photo of the BitDogLab board._  
 
-
-![Image](https://github.com/user-attachments/assets/...)  
+![Image](https://github.com/user-attachments/assets/2880ef58-302c-4b63-9c10-7fb33206e5c2)  
 
 _Photo of my implementation in the VSCode developmente environment._  
 
