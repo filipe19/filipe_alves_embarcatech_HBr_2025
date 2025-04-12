@@ -12,8 +12,7 @@ Brasília-DF, April 2025
 
 | Project | Description |  
 |---------|------------|  
-| [Project_1: **Countdown Timer with Event Logging via Interrupts**](https://github.com/filipe19/) | This implementation included a **software-based debounce solution for button input**. The debounce was handled using a waiting period (`delay`) based on the `absolute_time_diff_us` function to ensure that a minimum interval (defined as 300 ms via `DEBOUNCE_TIME_MS`) had passed since the last button press.  
-This approach prevented multiple rapid presses caused by mechanical or electrical noise from being incorrectly registered as valid clicks during the countdown interval.|  
+| [Project_1: **Countdown Timer with Event Logging via Interrupts**](https://github.com/filipe19/) | This implementation included a **software-based debounce solution for button input**. The debounce was handled using a waiting period (`delay`) based on the `absolute_time_diff_us` function to ensure that a minimum interval (defined as 300 ms via `DEBOUNCE_TIME_MS`) had passed since the last button press. This approach prevented multiple rapid presses caused by mechanical or electrical noise from being incorrectly registered as valid clicks during the countdown interval.|  
 | [Project_2: **Reading Analog Signals from a Joystick**](https://github.com/filipe19/) | ... |  
 | [Project_3:**Monitoring the MCU's Internal Temperature**](https://github.com/filipe19/) | ... |  
 
