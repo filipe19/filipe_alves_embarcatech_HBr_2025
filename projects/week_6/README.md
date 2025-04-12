@@ -1,51 +1,22 @@
-# **Digital Galton Board**  
+# **EmbarcaTech HBr 2025 - Week 6**  
 
-This project implements a digital version of a Galton Board (or Plinko), demonstrating how a series of random binary decisions leads to a **normal probability distribution**.  
+Institution: Instituto Hardware BR-DF  
+Course: **Technological Residency in Embedded Systems**  
+Author: **Filipe Alves de Sousa**  
+Brasília-DF, April 2025  
 
-## **Objective**  
+## **About This Repository**  
+- In addition to studying **Microcontroller Architectures and Manufacturers**, we also worked on practical implementations, such as:
 
-Create an interactive visualization that simulates the behavior of a Galton Board using:  
+## **Project List**  
 
-- OLED Display  
-- Buttons to introduce imbalances into the model  
-
-## **Materials List**  
-
-| Component            | Connection on BitDogLab     |  
-|----------------------|---------------------------|  
-| BitDogLab (RP2040)   | -                         |  
-| WS2812B 5x5 Matrix   | GPIO7                     |  
-| OLED Display I2C     | SDA: GPIO14 / SCL: GPIO15 |  
-
-## **Execution**  
-
-1. Open the project in VS Code, using an environment with support for the Raspberry Pi Pico SDK (CMake + ARM compiler).  
-2. Compile the project normally (Ctrl+Shift+B in VS Code or via terminal using CMake and Make).  
-3. Connect your BitDogLab via USB cable and put the Pico in boot mode (press the BOOTSEL button and connect the cable).  
-4. Copy the generated `.uf2` file to the storage drive that appears (RPI-RP2).  
-5. The Pico will restart automatically and begin executing the code.  
-6. The histogram will be updated on the OLED display, and the simulated events will appear on the LED matrix.  
-
-## **Logic**  
-
-- At each step, the "ball" moves left or right with a 50% probability.  
-- The total number of steps defines the depth of the triangle.  
-- The final position of the "ball" is recorded in the count vector.  
-- The OLED bars visually represent the frequency of each position.  
-
-## **Files**  
-
-- `src/main.py`: Main project code.  
-- `assets/galton_led.jpg`: Simulated paths.  
-- `assets/galton_hist.jpg`: Distribution histogram.  
-
-## **Project Images**  
-
-### **LED Matrix During Execution**  
-![galton_led](./assets/galton_led.jpg)  
-
-### **Histogram on OLED**  
-![galton_hist](./assets/galton_hist.jpg)  
+| Project | Description |  
+|---------|------------|  
+| [Project_1: **Countdown Timer with Event Logging via Interrupts**](https://github.com/filipe19/) | This implementation included a **software-based debounce solution for button input**. The debounce was handled using a waiting period (`delay`) based on the `absolute_time_diff_us` function to ensure that a minimum interval (defined as 300 ms via `DEBOUNCE_TIME_MS`) had passed since the last button press.  
+This approach prevented multiple rapid presses caused by mechanical or electrical noise from being incorrectly registered as valid clicks during the countdown interval.
+ |  
+| [Project_2: **Reading Analog Signals from a Joystick**](https://github.com/filipe19/) | ... |  
+| [Project_3:**Monitoring the MCU's Internal Temperature**](https://github.com/filipe19/) | ... |  
 
 ---  
 
