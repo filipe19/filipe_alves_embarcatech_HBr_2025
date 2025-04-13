@@ -7,16 +7,39 @@ This project implements a **joystick reader**, utilizing the Raspberry Pi Pico a
 ## **What is a Joystick?**
 
 A joystick is an input device commonly used for control in various applications. It typically consists of:
-- **Two potentiometers**: Responsible for measuring movement along the X (horizontal) and Y (vertical) axes.
+- **Two potentiometers**: Responsible for measuring movement along the Y (horizontal) and X (vertical) axes.
 - **Digital button**: Used to register additional input, like a "click" or "press."
 - **Voltage range**: Operates within 0 to 3.3 volts.
 - **Analog-to-Digital Conversion (ADC)**: Maps the continuous analog input values (voltage levels) into discrete digital values. The RP2040 microcontroller (used in Raspberry Pi Pico) has a 12-bit ADC resolution, meaning it can represent inputs in the range of **0 to 4095** (2<sup>12</sup> = 4096 discrete levels).
 
 The joystick reader captures values for both axes (X and Y) and processes them with a scaling factor of **(3.3V / 4096) = ~0.0008056640625** per ADC step.
 
-![how a joystick works](https://github.com...)  
+---
+
+## **Logic**
+
+---
+![Image](https://github.com/user-attachments/assets/65424078-39ab-43de-83d7-bf77bba2b128)
 _Illustration of how a joystick works_
 
+
+- **Joystick Movement**:
+
+  - **Y-axis**:
+    - Left: **~2047 to ~0**
+    - Right: **~2048 to ~4095**
+
+  - **X-axis**:
+    - Up: **~2047 to ~0**
+    - Down: **~2048 to ~4095**
+
+- **Button State (Z-axis)**:
+  - **0**: Not pressed = OFF.
+  - **1**: Pressed = ON.
+
+- The OLED Display will mirror the data shown in the serial monitor.
+
+---
 
 ---
 
@@ -50,23 +73,6 @@ Create a program in C that:
 4. **Run the Program**:
    - The joystick values (X, Y, and button state) will now be displayed both in the serial monitor and on the OLED.
 
----
-
-## **Logic**
-
-- **Joystick Movement**:
-  - **X-axis**:
-    - Left: **0 to ~2047**
-    - Right: **2048 to 4095**
-  - **Y-axis**:
-    - Up: **0 to ~2047**
-    - Down: **2048 to 4095**
-- **Button State (Z-axis)**:
-  - **0**: Not pressed.
-  - **1**: Pressed.
-- The OLED Display will mirror the data shown in the serial monitor.
-
----
 
 ## **Files**
 
@@ -79,10 +85,10 @@ Create a program in C that:
 
 Below are screenshots and photos demonstrating the system in action:
 
-![BitDogLab Board Setup](https://github.com...)  
+![Image](https://github.com/user-attachments/assets/8728358f-b4a7-49de-a03e-948fff1a381b)  
 _Photo of the BitDogLab board connected to the OLED display and joystick._
 
-![Program Running in VS Code](https://github.com/user-attachments...)  
+![Image](https://github.com/user-attachments/assets/3c67c388-c811-408d-98ed-371a6b99fe32)  
 _Screenshot of the program running within the VS Code environment._
 
 ---
