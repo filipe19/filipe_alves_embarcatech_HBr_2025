@@ -1,4 +1,4 @@
-# ** Internal Temperature [T] Reader – RP2040 + OLED Display**
+# **Internal Temperature [T] Reader – RP2040 + OLED Display**
 
 This project demonstrates how to **read and display the internal temperature** of the RP2040 microcontroller (used in the Raspberry Pi Pico W), using the **BitDogLab** development board. The temperature data is shown both on the **serial monitor** and on a **0.96" I2C OLED display**.
 
@@ -37,6 +37,7 @@ Source: [RP2040 Datasheet – Raspberry Pi](https://datasheets.raspberrypi.com/r
 ## **How the System Works**
 
 ![Image](https://github.com/user-attachments/assets/4b556fac-25f1-4e44-8695-7ba5b82651ba)
+
 _Temperature Sensor On Chip_
 
 1. The ADC on the Pico W is initialized and the temperature sensor is activated.
@@ -97,11 +98,13 @@ Create a program in **C** that:
 
 ## **System Demonstration**
 
-![Image](https://github.com/user-attachments/assets)
-_Code Terminal Output_
+![Image](https://github.com/user-attachments/assets/51e2e186-9363-4e65-8274-08eb999a8909)
+
+_Code Terminal Output --> Successfully implemented!_
+
  
-![Image](https://github.com/user-attachments/assets) 
-_BitDogLab + OLED Display_
+![Image](https://github.com/user-attachments/assets/3e1522e7-17b2-4aef-908a-29e0b68eda00)
+_Reading internal temperature [°C] --> BitDogLab + OLED Display + serial monitor_
 
 ---
 

@@ -52,7 +52,7 @@
  
  2 - [**Reading Analog Signals from a Joystick**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/week_6/Joystick_test)| This project implements a **joystick reader**, utilizing the Raspberry Pi Pico and the BitDogLab board to read joystick inputs and monitor system behavior. The main goal is to demonstrate the use of analog-to-digital conversion (ADC) for joystick inputs and display real-time data both on the serial monitor and on an OLED display.
  
- 3 - [**Monitoring the MCU's Internal Temperature**](https://github.com/filipe19/)| This hands-on implementation demonstrated how to initialize and configure I2C and the OLED display; how to use the internal ADC to read the RP2040's chip temperature; how to convert the ADC value into temperature using the formula from the datasheet; and how to display formatted messages both on the terminal and the display.
+ 3 - [**Monitoring the MCU's Internal Temperature**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/week_6/internal_temperature)| This hands-on implementation demonstrated how to initialize and configure I2C and the OLED display; how to use the internal ADC to read the RP2040's chip temperature; how to convert the ADC value into temperature using the formula from the datasheet; and how to display formatted messages both on the terminal and the display.
  
  ---
  
