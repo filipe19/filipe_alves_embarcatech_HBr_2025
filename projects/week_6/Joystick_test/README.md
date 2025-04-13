@@ -86,10 +86,11 @@ Create a program in C that:
 Below are screenshots and photos demonstrating the system in action:
 
 ![Image](https://github.com/user-attachments/assets/8728358f-b4a7-49de-a03e-948fff1a381b)  
-_Photo of the BitDogLab board connected to the OLED display and joystick._
+_Screenshot of the program running within the VS Code environment._
+
 
 ![Image](https://github.com/user-attachments/assets/3c67c388-c811-408d-98ed-371a6b99fe32)  
-_Screenshot of the program running within the VS Code environment._
+_Photo of the BitDogLab board connected to the OLED display and joystick._
 
 ---
 
