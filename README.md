@@ -58,6 +58,16 @@
  
  
  ### **Week 7:**  
- 
+
+This week, the AgroHealth – Intelligent Monitoring System for Medicinal Plants project proposal was developed in a group, applying the concepts of the 6-layer IoT model:
+Perception: sensors (moisture, pH, imaging, etc.); Network: connectivity (LoRaWAN); Edge: ESP32/Jetson; Cloud Storage; Abstraction via API; and Application: presentation through dashboards.
+The system enables remote monitoring of plantations, with alerts, automatic irrigation control, and OTA (Over-The-Air) updates, allowing reprogramming of Pico W and ESP32 devices without physical access.
+
+Projects 1 and 2 were also implemented: the modular restructuring of a blinking LED using a HAL/driver/app architecture, and conversion of internal temperature sensor readings via ADC to Celsius, including unit testing with Unity.
+
+ 1 - [**Modular LED Blinker for Raspberry Pi Pico W**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/week_7/struct_blink) | We implemented a modular architecture for controlling the built-in LED on the Raspberry Pi Pico W, organized into three layers: Driver (direct hardware access), HAL (hardware abstraction), and Application (main logic). This structure ensures good organization, facilitates testing, maintenance, and code reuse, while also demonstrating solid design practices for embedded systems. The project highlights benefits such as portability, structural clarity, and practical learning in hardware interaction.
+
+ 2 - [**Internal Temperature Reader with ADC for Raspberry Pi Pico W**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/week_7/unity_test_adc_temperature) | This project presents an efficient implementation of the RP2040 microcontroller’s internal temperature sensor, using the manufacturer's official conversion equation to obtain accurate readings in degrees Celsius from the ADC. The code was developed with a focus on clarity, optimization, and documentation, as well as including unit tests to validate results under different thermal conditions. Its application is ideal for embedded systems and IoT devices that require basic thermal monitoring, eliminating the need for external sensors and serving as an educational foundation for studies on ADCs and integrated sensors.
+
  ---  
  
