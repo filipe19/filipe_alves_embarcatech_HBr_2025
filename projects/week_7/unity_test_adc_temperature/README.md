@@ -11,26 +11,27 @@ The RP2040 features an internal temperature sensor connected to ADC channel 4. T
 - Unit tests using the **Unity Test Framework**  
 - Modular and reusable structure  
 
-## **Temperature Conversion Equation**
+
+
+### **Conversion Equation (from the RP2040 Datasheet)**
 The official formula from the RP2040 datasheet for converting ADC voltage to temperature is:
 
-
 ```
-
-\[
-T(°C) = 27 - \frac{V_{ADC} - 0.706}{0.001721}
-\]
+T [°C] = 27 - (V_ADC - 0.706) / 0.001721
 ```
 
 
+> **Note**: The formula provides an approximation. For precision applications, consider calibrating the sensor or using an external voltage reference.
+
+Source: [RP2040 Datasheet – Raspberry Pi](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
 
 Where:  
-```
 
-- \(V_{ADC} = \frac{adc\_val \times 3.3}{4095}\)  
-- 0.706 V is the typical sensor output at **27°C**  
-- 0.001721 V/°C represents the temperature-voltage slope  
-```
+- `V_ADC`: the voltage measured by the ADC.
+- `0.706 V`: the typical sensor output voltage at 27°C.
+- `0.001721 V/°C`: represents the temperature-voltage slope; the voltage change per degree Celsius.
+
+
 
 
 ## **Project Structure**
@@ -98,14 +99,14 @@ ctest -V
 ```
 
 ## **Practical Applications:**
--Embedded temperature monitoring
--Fan and thermal control
--IoT projects using internal sensors
--Hands-on learning about ADCs
+Embedded temperature monitoring;
+Fan and thermal control;
+IoT projects using internal sensors; and
+Hands-on learning about ADCs.
 
 ## **References:**
--RP2040 Datasheet - Section 4.9.5: Temperature Sensor
--Unity Test Framework
+RP2040 Datasheet - Section 4.9.5: Temperature Sensor; 
+Unity Test Framework
 
 
 ## **System Behavior Images**
@@ -122,9 +123,9 @@ _Screenshot of the program running within the VS Code environment._
 
 ## **Contributions**
 Feel free to:
--Report bugs
--Open feature requests
--Contribute new test cases
+Report bugs
+Open feature requests
+Contribute new test cases
 
 ## **License**
 MIT License - see the LICENSE file for details.
