@@ -2,12 +2,7 @@
 // Author: Filipe Alves de Sousa
 // This program reads the internal temperature sensor of the Raspberry Pi Pico (RP2040)
 // Includes ADC to Celsius conversion function and unit tests using Unity framework
-//----------------------------------------------------------------------------------------------
-
-
 /* ========================================================================
-    Embarcatech, April 2025 - RP2040 Internal Temperature Reader
-    Author: Filipe Alves de Sousa
     
     This module implements the internal temperature sensor reading and conversion
     for Raspberry Pi Pico (RP2040). Includes:

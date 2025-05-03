@@ -1,13 +1,7 @@
 // Embarcatech, April 2025 - RP2040 Internal Temperature Sensor Header
 // Author: Filipe Alves de Sousa
-// This header defines the interface for converting RP2040 internal temperature
-// sensor ADC readings to Celsius degrees.
-//-----------------------------------------------------------------------------
-
 /* ========================================================================
-    Embarcatech, April 2025 - RP2040 Internal Temperature Sensor Header
-    Author: Filipe Alves de Sousa
-    
+   
     This header defines the interface for converting RP2040 internal temperature
     sensor ADC readings to Celsius degrees.
     
