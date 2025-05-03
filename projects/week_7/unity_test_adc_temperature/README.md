@@ -15,23 +15,25 @@ The RP2040 features an internal temperature sensor connected to ADC channel 4. T
 The official formula from the RP2040 datasheet for converting ADC voltage to temperature is:
 
 
+```
 
 \[
 T(°C) = 27 - \frac{V_{ADC} - 0.706}{0.001721}
 \]
+```
 
 
 
 Where:  
+```
+
 - \(V_{ADC} = \frac{adc\_val \times 3.3}{4095}\)  
 - 0.706 V is the typical sensor output at **27°C**  
 - 0.001721 V/°C represents the temperature-voltage slope  
+```
 
 
 ## **Project Structure**
-pgsql
-Copiar
-Editar
 ```
 rp2040_adc_temp_sensor/
 ├── src/
@@ -59,9 +61,8 @@ Unit tests were implemented to validate the accuracy of the adc_to_celsius() con
  Lower temperature (-8°C)
 
 ## **Test Output Example**
-mathematica
-Copiar
-Editar
+
+```
 === Starting Temperature Conversion Tests ===
 
 [1/4] Testing reference point (27°C)... PASS
@@ -71,17 +72,18 @@ Editar
 
 === All tests completed successfully ===
 
+```
+
 ## How to Use
 ## **Prerequisites**
+
 Raspberry Pi Pico W
 Pico SDK
 CMake ≥ 3.13
 ARM Toolchain (e.g., arm-none-eabi)
 
 ## **Build Steps:**
-bash
-Copiar
-Editar
+```
 git clone https://github.com/your-username/rp2040_adc_temp_sensor.git
 cd rp2040_adc_temp_sensor
 export PICO_SDK_PATH=/path/to/pico-sdk
@@ -93,16 +95,17 @@ bash
 Copiar
 Editar
 ctest -V
+```
 
 ## **Practical Applications:**
-Embedded temperature monitoring
-Fan and thermal control
-IoT projects using internal sensors
-Hands-on learning about ADCs
+-Embedded temperature monitoring
+-Fan and thermal control
+-IoT projects using internal sensors
+-Hands-on learning about ADCs
 
 ## **References:**
-RP2040 Datasheet - Section 4.9.5: Temperature Sensor
-Unity Test Framework
+-RP2040 Datasheet - Section 4.9.5: Temperature Sensor
+-Unity Test Framework
 
 
 ## **System Behavior Images**
@@ -119,9 +122,9 @@ _Screenshot of the program running within the VS Code environment._
 
 ## **Contributions**
 Feel free to:
-Report bugs
-Open feature requests
-Contribute new test cases
+-Report bugs
+-Open feature requests
+-Contribute new test cases
 
 ## **License**
 MIT License - see the LICENSE file for details.

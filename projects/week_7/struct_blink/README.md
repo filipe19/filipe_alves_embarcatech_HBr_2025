@@ -34,20 +34,23 @@ pico-w-modular-blink/
 ## How to Build
 
 1. Clone the repository:
-   ```bash
+   ```
+   bash
    git clone https://github.com/your-username/pico-w-modular-blink.git
    cd pico-w-modular-blink
    ```
 
 2. Set up the environment:
-   ```bash
+   ```
+   bash
    export PICO_SDK_PATH=/path/to/pico-sdk
    mkdir build
    cd build
    ```
 
 3. Compile the project:
-   ```bash
+   ```
+   bash
    cmake ..
    make -j4
    ```
@@ -75,7 +78,8 @@ pico-w-modular-blink/
 
 ### HAL Layer
 
-```c
+```
+c
 // Initialization
 int hal_led_init();
 
@@ -109,7 +113,8 @@ sequenceDiagram
 ## Usage Examples
 
 ### 1. Blink LED in a loop
-```c
+```
+c
 hal_led_init();
 while(1) {
     hal_led_blink_delay(250); // Blinks every 250ms
@@ -117,7 +122,8 @@ while(1) {
 ```
 
 ### 2. Manual control
-```c
+```
+c
 hal_led_init();
 hal_led_turn_on();
 sleep_ms(1000);
@@ -128,11 +134,11 @@ hal_led_turn_off();
 Below are screenshots and photos demonstrating the system in action:
 
 ### **The board during testing**  
-![sctruct_blink](https:)  
+![Image](https://github.com/user-attachments/assets/b632f58f-f9f9-4ea1-b8c8-e321220fda99) 
 _Photo of the BitDogLab board._
 
 ### **screenshot during testing using VSCode – compiling and running**  
-![vscode_blink](https://github.com/user-attachments/assets/872)  
+![Image](https://github.com/user-attachments/assets/8a68e697-830a-4c2e-abbf-c09936d28a1d)
 _Screenshot of the program running within the VS Code environment._
 
 
