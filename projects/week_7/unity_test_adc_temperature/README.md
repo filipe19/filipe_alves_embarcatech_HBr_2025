@@ -56,10 +56,10 @@ Unit tests were implemented to validate the accuracy of the adc_to_celsius() con
 
 ## Included tests:
 
- Calibration point (27°C)
- Typical value (20°C)
- Higher temperature (38°C)
- Lower temperature (-8°C)
+- Calibration point (27°C)
+- Typical value (20°C)
+- Higher temperature (38°C)
+- Lower temperature (-8°C)
 
 ## **Test Output Example**
 
@@ -75,13 +75,13 @@ Unit tests were implemented to validate the accuracy of the adc_to_celsius() con
 
 ```
 
-## How to Use
+
 ## **Prerequisites**
 
-Raspberry Pi Pico W
-Pico SDK
-CMake ≥ 3.13
-ARM Toolchain (e.g., arm-none-eabi)
+- Raspberry Pi Pico W
+- Pico SDK
+- CMake ≥ 3.13
+- ARM Toolchain (e.g., arm-none-eabi)
 
 ## **Build Steps:**
 ```
@@ -99,33 +99,33 @@ ctest -V
 ```
 
 ## **Practical Applications:**
-Embedded temperature monitoring;
-Fan and thermal control;
-IoT projects using internal sensors; and
-Hands-on learning about ADCs.
+- Embedded temperature monitoring;
+- Fan and thermal control;
+- IoT projects using internal sensors; and
+- Hands-on learning about ADCs.
 
 ## **References:**
-RP2040 Datasheet - Section 4.9.5: Temperature Sensor; 
-Unity Test Framework
+- RP2040 Datasheet - Section 4.9.5: Temperature Sensor; 
+- Unity Test Framework.
 
 
 ## **System Behavior Images**
 Below are screenshots and photos demonstrating the system in action:
 
 ### **The board during testing**  
-![sctruct_blink](https:)  
+![bitdoglab](https:)  
 _Photo of the BitDogLab board._
 
 ### **screenshot during testing using VSCode – compiling and running**  
-![vscode_blink](https://github.com/user-attachments/assets/872)  
+![vscode_tempADC](https://github.com/user-attachments/assets/872)  
 _Screenshot of the program running within the VS Code environment._
 
 
 ## **Contributions**
 Feel free to:
-Report bugs
-Open feature requests
-Contribute new test cases
+- Report bugs
+- Open feature requests
+- Contribute new test cases
 
 ## **License**
 MIT License - see the LICENSE file for details.
