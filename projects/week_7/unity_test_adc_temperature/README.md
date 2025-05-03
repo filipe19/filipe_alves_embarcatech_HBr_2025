@@ -32,6 +32,7 @@ Where:
 pgsql
 Copiar
 Editar
+```
 rp2040_adc_temp_sensor/
 ├── src/
 │   └── temperature_conv.c         # Conversion implementation
@@ -45,6 +46,7 @@ rp2040_adc_temp_sensor/
 │   └── unity_internals.h
 ├── CMakeLists.txt                 # Build configuration
 └── README.md                      # Documentation
+```
 
 ## **Unit Tests (Unity Framework)**
 Unit tests were implemented to validate the accuracy of the adc_to_celsius() conversion function using simulated ADC readings.

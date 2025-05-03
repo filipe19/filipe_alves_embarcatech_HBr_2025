@@ -91,7 +91,8 @@ bool hal_led_toggle();
 
 ## Control Flow
 
-```mermaid
+```
+mermaid
 sequenceDiagram
     main->>+HAL: hal_led_init()
     HAL->>+Driver: driver_init()
