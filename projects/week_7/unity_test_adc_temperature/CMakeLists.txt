@@ -44,12 +44,15 @@ pico_set_program_name(unity_test_adc_temperature "unity_test_adc_temperature")
 pico_set_program_version(unity_test_adc_temperature "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(unity_test_adc_temperature 1)
+pico_enable_stdio_uart(unity_test_adc_temperature 0)
 pico_enable_stdio_usb(unity_test_adc_temperature 1)
 
 # Add the standard library to the build
 target_link_libraries(unity_test_adc_temperature
-        pico_stdlib)
+        hardware_adc
+        pico_stdlib
+        hardware_uart
+        hardware_adc)
 
 # Add the standard include files to the build
 target_include_directories(unity_test_adc_temperature PRIVATE

@@ -61,18 +61,80 @@ Unit tests were implemented to validate the accuracy of the adc_to_celsius() con
 - Higher temperature (38°C)
 - Lower temperature (-8°C)
 
+## Adjusted Tolerances:
+
+±0.5°C for normal operating temperatures (calibrated range near 27°C)
+
+±1.0°C for extreme values (near ADC limits 0-4095)
+
+### Additional technical notes:
+
+- The tighter ±0.5°C tolerance applies to the sensor's optimal range (typically 10°C to 40°C)
+
+- The wider ±1.0°C margin accounts for:
+
+	- Non-linearities at temperature extremes
+
+	- Voltage reference variations
+
+	- ADC quantization error at range limits
+
+	- These tolerances align with RP2040 datasheet specifications for the internal temperature sensor.
+
+
 ## **Test Output Example**
 
 ```
+===== TEMPERATURE SENSOR TEST =====
+VREF: 3.3V | ADC Resolution: 4095
+Voltage @27°C: 0.706V
+
+
 === Starting Temperature Conversion Tests ===
 
-[1/4] Testing reference point (27°C)... PASS
-[2/4] Testing typical value (20°C)... PASS
-[3/4] Testing higher temperature (~38.48°C)... PASS
-[4/4] Testing lower temperature (~-8.13°C)... PASS
+=== CALIBRATION POINT DETAILS ===
+ADC Value: 875
+Voltage: 0.706 V
+Expected: 27.00°C | Actual: 27.00°C
+Difference: 0.00°C
+[1/6] Testing reference point (27°C)...         ADC: 875   Expected: 27.00°C  Actual: 27.00°C  PASS
 
-=== All tests completed successfully ===
+=== TYPICAL VALUE DETAILS (20°C) ===
+ADC Value: 891
+Voltage: 0.740 V
+Expected: 20.00°C | Actual: 20.01°C
+Difference: -0.01°C
+[2/6] Testing typical value (20°C)...           ADC: 891   Expected: 20.00°C  Actual: 20.01°C  PASS
 
+=== HIGH TEMPERATURE DETAILS (38.48°C) ===
+ADC Value: 850
+Voltage: 0.644 V
+Expected: 38.48°C | Actual: 38.47°C
+Difference: 0.01°C
+[3/6] Testing higher temperature (~38.48°C)...  ADC: 850   Expected: 38.48°C  Actual: 38.47°C  PASS
+
+=== LOW TEMPERATURE DETAILS (-8.13°C) ===
+ADC Value: 950
+Voltage: 0.816 V
+Expected: -8.13°C | Actual: -8.12°C
+Difference: -0.01°C
+[4/6] Testing lower temperature (~-8.13°C)...   ADC: 950   Expected: -8.13°C  Actual: -8.12°C  PASS
+
+=== MINIMUM ADC VALUE DETAILS ===
+ADC Value: 0
+Voltage: 0.000 V
+Expected: 152.93°C | Actual: 152.93°C
+Difference: 0.00°C
+[5/6] Testing minimum ADC value (0)...          ADC: 0     Expected: 152.93°C Actual: 152.93°C PASS
+
+=== MAXIMUM ADC VALUE DETAILS ===
+ADC Value: 4095
+Voltage: 3.300 V
+Expected: -128.57°C | Actual: -128.57°C
+Difference: 0.00°C
+[6/6] Testing maximum ADC value (4095)...       ADC: 4095  Expected: -128.57°C Actual: -128.57°C PASS
+
+===== TEST COMPLETE =====
 ```
 
 
@@ -112,12 +174,17 @@ ctest -V
 ## **System Behavior Images**
 Below are screenshots and photos demonstrating the system in action:
 
-### **The board during testing**  
-![bitdoglab](https:)  
-_Photo of the BitDogLab board._
+### **Loading into Flash**  
+![Image](https://github.com/user-attachments/assets/52e4a96d-8059-4d53-ad4c-1e4560504b2d) 
+_Screenshot of the program running within the VS Code environment._
 
-### **screenshot during testing using VSCode – compiling and running**  
-![vscode_tempADC](https://github.com/user-attachments/assets/872)  
+### **screenshot during testing using VSCode – outputs**  
+![Image](https://github.com/user-attachments/assets/93f50086-e93c-4346-aa5e-b10fd3f9b0e8)
+_Screenshot of the program running within the VS Code environment._
+
+
+### **screenshot during testing using VSCode – outputs**  
+![Image](https://github.com/user-attachments/assets/7a791028-14a0-4912-8360-595d31451ce9)
 _Screenshot of the program running within the VS Code environment._
 
 
