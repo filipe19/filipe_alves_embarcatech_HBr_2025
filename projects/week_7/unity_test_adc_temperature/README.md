@@ -1,33 +1,32 @@
 # **Internal Temperature Reader with ADC for Raspberry Pi Pico W**
-This project demonstrates how to use the built-in temperature sensor in the RP2040 microcontroller of the Raspberry Pi Pico W, reading the value through the internal 12-bit ADC and converting the output to degrees Celsius based on the official documentation's equation.
 
-## Overview
-The RP2040 includes an internal temperature sensor connected to ADC channel 4, where the voltage varies linearly with temperature. The converted value can be used for thermal monitoring or control in embedded systems.
+This project provides an efficient implementation of the RP2040 microcontroller’s internal temperature sensor. It reads the sensor value via the built-in 12-bit ADC and converts the output to degrees Celsius using the official equation provided in the documentation.
 
-## This project includes:
+## **Overview**
+The RP2040 features an internal temperature sensor connected to ADC channel 4. The sensor’s voltage varies linearly with temperature, making it useful for basic thermal monitoring in embedded applications.
 
-ADC value to Celsius conversion
+## **Features**
+- Accurate ADC-to-Celsius conversion  
+- Function: `float adc_to_celsius(uint16_t adc_val);`  
+- Unit tests using the **Unity Test Framework**  
+- Modular and reusable structure  
 
-Function float adc_to_celsius(uint16_t adc_val);
+## **Temperature Conversion Equation**
+The official formula from the RP2040 datasheet for converting ADC voltage to temperature is:
 
-Unit tests using Unity Test Framework
 
-Modular and reusable structure
 
-## **Conversion Equation**
-The official equation from the RP2040 datasheet to convert voltage to temperature is:
+\[
+T(°C) = 27 - \frac{V_{ADC} - 0.706}{0.001721}
+\]
 
-r
-Copiar
-Editar
-T(°C) = 27 - (V_ADC - 0.706) / 0.001721
-Where:
 
-V_ADC = (adc_val * 3.3) / 4095
 
-0.706 V is the typical output at 27°C
+Where:  
+- \(V_{ADC} = \frac{adc\_val \times 3.3}{4095}\)  
+- 0.706 V is the typical sensor output at **27°C**  
+- 0.001721 V/°C represents the temperature-voltage slope  
 
-0.001721 V/°C is the temperature-voltage slope
 
 ## **Project Structure**
 pgsql
@@ -39,13 +38,13 @@ rp2040_adc_temp_sensor/
 ├── include/
 │   └── temperature_conv.h         # Conversion function header
 ├── tests/
-│   └── test_temperature_conv.c    # Unit tests with Unity
+│   └── test_temperature_conv.c    # Unit tests with Unity framework
 ├── lib_unity_src/
 │   └── unity.c
 │   └── unity.h
 │   └── unity_internals.h
 ├── CMakeLists.txt                 # Build configuration
-└── README.md                      # This guide
+└── README.md                      # Documentation
 
 ## **Unit Tests (Unity Framework)**
 Unit tests were implemented to validate the accuracy of the adc_to_celsius() conversion function using simulated ADC readings.
