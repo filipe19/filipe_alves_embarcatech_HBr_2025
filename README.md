@@ -71,3 +71,12 @@ Projects 1 and 2 were also implemented: the modular restructuring of a blinking 
 
  ---  
  
+ ### **Week 8:**  
+
+This week, the Digital Galton Board project was developed using the BitDogLab platform with the Raspberry Pi Pico. The application simulated the behavior of a digital Galton Board, allowing the visualization of the statistical distribution resulting from multiple particles (balls) colliding with obstacles and accumulating in lower compartments (receptacles).
+
+The system explored concepts such as the binomial distribution, normal (Gaussian) distribution, the Central Limit Theorem, and the Law of Large Numbers, while also applying principles of collision physics with control over parameters such as gravity, restitution coefficient, and velocity. User interaction was implemented through digital buttons (interrupts), and real-time visualization was displayed on an SSD1306 OLED screen via I2C. In future iterations, the project may also include a buzzer for collision sound effects, controlled via PWM and DMA.
+
+The code was structured in layers and split into multiple files to facilitate maintenance, testing, and scalability.
+
+1 - [**Digital Galton Board with Raspberry Pi Pico W and BitDogLab**] [**Modular LED Blinker for Raspberry Pi Pico W**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/lab01_galton_board-filipe19) | The project digitally simulated a Galton Board with multiple simultaneous particles, physical parameter control via buttons, graphical OLED display, and real-time statistics. A modular structure was adopted with separation between the application layer, simulation logic, input control, and graphical interface. This implementation enhanced the understanding of statistical phenomena while strengthening skills in embedded programming, analog input reading, peripheral usage, and clean code organization.
