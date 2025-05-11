@@ -1,4 +1,3 @@
----
 # **EmbarcaTech HBr 2025**
 
 **Institution:** Instituto Hardware BR-DF
