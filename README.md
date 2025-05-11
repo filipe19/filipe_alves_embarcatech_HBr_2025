@@ -14,7 +14,7 @@
  
  | Project | Description |  
  |---------|------------|  
- | [Project_1: Digital Galton Board](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/week_8/lab01_galton_board-filipe19) | Simulation of random events with OLED display visualization and histogram |  
+ | [Project_1: Digital Galton Board](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/4764f8def0005162c2caa11806548cc18b9d950a/projects/week_8/lab01_galton_board-filipe19) | Simulation of random events with OLED display visualization and histogram |  
  | [Project_2: Sound Synthesizer](./projects/sound_synthesizer/) | Sound generation using buttons and a buzzer |  
  | [Project_3: Balancing Robot](./projects/balancing_robot/) | A two-wheeled self-balancing robot with PID control |  
  
@@ -79,4 +79,4 @@ The system explored concepts such as the binomial distribution, normal (Gaussian
 
 The code was structured in layers and split into multiple files to facilitate maintenance, testing, and scalability.
 
-1 - [**Digital Galton Board with Raspberry Pi Pico W and BitDogLab**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/main/projects/lab01_galton_board-filipe19) | The project digitally simulated a Galton Board with multiple simultaneous particles, physical parameter control via buttons, graphical OLED display, and real-time statistics. A modular structure was adopted with separation between the application layer, simulation logic, input control, and graphical interface. This implementation enhanced the understanding of statistical phenomena while strengthening skills in embedded programming, analog input reading, peripheral usage, and clean code organization.
+1 - [**Digital Galton Board with Raspberry Pi Pico W and BitDogLab**](https://github.com/filipe19/filipe_alves_embarcatech_HBr_2025/tree/4764f8def0005162c2caa11806548cc18b9d950a/projects/week_8/lab01_galton_board-filipe19) | The project digitally simulated a Galton Board with multiple simultaneous particles, physical parameter control via buttons, graphical OLED display, and real-time statistics. A modular structure was adopted with separation between the application layer, simulation logic, input control, and graphical interface. This implementation enhanced the understanding of statistical phenomena while strengthening skills in embedded programming, analog input reading, peripheral usage, and clean code organization.
